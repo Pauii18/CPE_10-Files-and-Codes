@@ -34,11 +34,11 @@ int main(){
             break;
             case 4 : std::cout << "is stack empty? " << isEmpty() << std::endl;
             break;
-            case 5: std::cout << "s the stack full? " << isFull () <<std::endl;
+            case 5: std::cout << "is the stack full? " << isFull () <<std::endl;
             break;
             case 6: displayStack() ;
             break; 
-            default: std::cout<<"Invaid Choice" << std::endl;
+            default: std::cout<<"Invalid Choice" << std::endl;
             break;
         }
     
@@ -75,8 +75,9 @@ void push(){
 }
 
 void pop(){
-    if(isEmpty){
+    if(isEmpty()){
         std::cout << "Stack Underflow" << std::endl;
+        return;
     }
 
     std::cout <<"Popping: " << stackArr[top]<<std::endl;
@@ -98,7 +99,7 @@ void displayStack(){
     if (isEmpty()){
         std::cout << "Stack is Empty" << std::endl;
         return;
-        pop();
+        
     }
     for (i=top; i>=0; i--){
         std::cout << stackArr[i] << std::endl;
